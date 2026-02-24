@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OMNI Store Schedule Calendar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>OMNI Store Schedule Calendar</h1>
+
+  <div class="controls">
+    <input type="file" id="excelUpload" accept=".xlsx,.xls" />
+    <input type="text" id="storeFilter" placeholder="Search store" />
+    <button onclick="prevMonth()">◀</button>
+    <span id="monthLabel"></span>
+    <button onclick="nextMonth()">▶</button>
+    <button onclick="window.print()">Print</button>
+  </div>
+</header>
+
+<div class="container">
+  <div id="calendar"></div>
+
+  <aside class="legend">
+    <h3>Legend</h3>
+    <p class="off">Off Start Date</p>
+    <p class="between">Between Off & Activation</p>
+    <p class="active">Activation Date</p>
+  </aside>
+</div>
+
+<script src="calendar.js"></script>
+</body>
+</html>
